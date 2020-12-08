@@ -1,7 +1,7 @@
 ![ED](./design_assets/Logo.ico)
 # EDISON: An Extremely Deligent and Intelligent SON (of a B****)
 
-EDISON is a voice assistant written in JavaScript using **React** and **NodeJS**. It uses the [Bumblebee Hot Word Detection system](https://github.com/jaxcore/bumblebee-hotword), the [Artyom Speech Synthesis Library](https://sdkcarlos.github.io/sites/artyom.html) and the `webkitSpeechRecognition` API available in Chromium-based broweser. The requests are serviced by a REST-ful backend written in Express.js.
+EDISON is a voice assistant written in JavaScript using **React** and **NodeJS**. It uses the [Bumblebee Hot Word Detection system](https://github.com/jaxcore/bumblebee-hotword), the [Artyom Speech Synthesis Library](https://sdkcarlos.github.io/sites/artyom.html) and the `webkitSpeechRecognition` API available in Chromium-based browsers. The requests are serviced by a REST-ful backend written in Express.js.
 
 ## Running it yourself
 
