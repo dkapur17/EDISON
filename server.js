@@ -1,12 +1,14 @@
 const express = require('express');
 const axios = require('axios');
 
+const QnARoutes = require('./routes/QnARoutes');
+
 const app = express();
 const port = 5000;
 
-app.get('/api/about', (req, res) => {
-    res.send("I am an Extremely Deligent and Intelligent System of Neurons. But you can just call me Edison.");
-});
+app.use(express.json());
+
+app.use('/qna', QnARoutes);
 
 app.listen(port, () => {
     console.log(`Listening on Port ${port}`);

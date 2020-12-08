@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Edison_Wake from '../partials/Wake';
 import Edison_Listen from '../partials/Listen';
 import SpeechParse from '../partials/SpeechParse';
+import Edison_Speak from '../partials/Speak';
+import swal from 'sweetalert';
 
 const wakeSound = new Audio("Awake_Sound.mp3");
 
@@ -34,6 +36,10 @@ class Edison extends Component {
     }
 
     handleListen = () => {
+        if (Edison_Speak.isSpeaking())
+            Edison_Speak.shutUp();
+        if (swal.getState().isOpen)
+            swal.close();
         Edison_Listen.start();
         Edison_Listen.onstart = () => {
             wakeSound.play();
@@ -57,7 +63,7 @@ class Edison extends Component {
             </div>
         return (
             <div className="Edison d-flex-column align-items-center text-center">
-                <h1 className="display-1">Hello There! I'm EDISON!</h1>
+                <h1 className="display-1">Hello There! I'm EDISON.</h1>
                 <p className="lead">Say "Hey Edison" to get started</p>
                 {status}
                 <div className="lead d-block" style={{ color: (this.state.isFinal ? "#61DAFB" : "gray"), height: "30px" }} >{this.state.transcript}</div>

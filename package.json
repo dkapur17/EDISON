@@ -1,16 +1,24 @@
 {
   "name": "edison",
+  "proxy": "http://localhost:5000",
   "version": "1.0.0",
   "description": "Personalized Voice Assistant Written Entirely in JS",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server_dev": "nodemon server.js",
+    "server": "node server.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server_dev\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Dhruv Kapur",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
     "concurrently": "^5.3.0",
-    "express": "^4.17.1"
+    "ddg": "0.0.3",
+    "express": "^4.17.1",
+    "sweetalert": "^2.1.2"
   }
 }
