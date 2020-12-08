@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const ddg = require('ddg');
+require('dotenv').config();
 
 const { parseTime, parseDate } = require('../util_functions');
 
@@ -17,7 +18,7 @@ router.post('/time', (req, res) => {
     else {
         const loc = transcript.split(' IN ')[1];
         const escapedLoc = loc.replace(' ', '+');
-        axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${escapedLoc}&key=f02fce800aab47ce8b059ccbaa2d76b5`)
+        axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${escapedLoc}&key=${process.env.WORLD_TIME_API_KEY}`)
             .then((apiRes) => {
                 const timeZone = apiRes.data.results[0].annotations.timezone.name;
                 const localTime = parseTime(new Date(new Date().toLocaleString("en-US", { timeZone })), loc);

@@ -48,6 +48,10 @@ export const getJoke = (transcript) => {
         .catch(err => errHandle(err))
 };
 
+export const nothing = () => {
+    Edison_Speak.say("OK.");
+}
+
 export const fallThrough = (query) => {
     axios.post('/qna/fallthrough', { query })
         .then(res => {

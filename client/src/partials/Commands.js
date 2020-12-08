@@ -11,7 +11,7 @@ Fallthrough websearch
 
 ****************************************************************************************************/
 
-import { aboutEdison, time, todayDate, presence, getJoke, fallThrough } from '../functions/qnaRequests';
+import { aboutEdison, time, todayDate, presence, getJoke, nothing, fallThrough } from '../functions/qnaRequests';
 
 const Commands = [
     { req: /(WHAT TIME IS IT|WHAT IS THE TIME)/, res: (transcript) => time(transcript) },
@@ -20,6 +20,7 @@ const Commands = [
     { req: /(TELL ME ABOUT YOURSELF|(WHO|WHAT) ARE YOU)/, res: () => aboutEdison() },
     { req: /(ARE|)YOU (THERE|LISTENING)/, res: () => presence() },
     { req: /TELL ME A \D*JOKE/, res: (transcript) => getJoke(transcript) },
+    { req: /NOTHING/, res: () => nothing() },
     { req: /\D*/, res: (transcript) => fallThrough(transcript) }
 ];
 
