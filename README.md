@@ -1,4 +1,3 @@
-# Extremely Deligent and Intelligent System of Neurons
+# Extremely Deligent and Intelligent SON (of a B****)
 
-# Idea
-EDISON is a voice assistant written in React and JavaScript. It uses the Bumblebee Hot Word Detection system, the Artyom Speech Synthesis Library and the webkitSpeechRecognition system of the Chromium Browser. The brains of the operation is a simple API backend that parses incoming commands using regex, determines the response and tells the React app what to say. The API is written in Express.
+EDISON is a voice assistant written in React and JavaScript. It uses the Bumblebee Hot Word Detection system, the Artyom Speech Synthesis Library and the `webkitSpeechRecognition` API available in Chromium-based broweser. The requests are serviced by a REST API backend written in Express.js.

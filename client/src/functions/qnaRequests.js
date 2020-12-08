@@ -68,9 +68,12 @@ export const fallThrough = (query) => {
                         const reply = event.results[0][0].transcript.toUpperCase();
                         let re = /\D*(YES|SURE)\D*/;
                         if (re.test(reply)) {
-                            const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-                            const webSearch = window.open(url, '_blank');
-                            webSearch.focus();
+                            Edison_Speak.say("Search result coming right up");
+                            setTimeout(() => {
+                                const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                                const webSearch = window.open(url, '_blank');
+                                webSearch.focus();
+                            }, 2000);
                         }
                         else
                             Edison_Speak.say("Alright");

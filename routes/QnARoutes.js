@@ -7,7 +7,7 @@ const { parseTime, parseDate } = require('../util_functions');
 const router = express.Router();
 
 router.get('/about', (req, res) => {
-    return res.send("I am an Extremely Deligent and Intelligent System of Neurons. But you can just call me Edison.");
+    return res.send("I am an Extremely Deligent and Intelligent SON OF A Beep. But you can just call me EDISON.");
 });
 
 router.post('/time', (req, res) => {
