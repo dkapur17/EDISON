@@ -2,7 +2,7 @@
 
 
 ## Client
-UI-wise, there is not a lot going on here. `App.js` simply renders the `Edison` component, which can be found in `client/src/components/Edison.js`.
+UI-wise, there is not a lot going on here. `App.js` simply renders the `Edison` component, which can be found in [`client/src/components/Edison.js`](./client/src/components/Edison.js).
 
 Have a look at the import statements. There are three distinct parts to EDISON.
 1. The wake word detection system called `Edison_Wake`. Implemented in [`client/src/partials/Wake.js`](./client/src/partials/Wake.js)
