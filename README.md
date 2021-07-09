@@ -3,6 +3,12 @@
 
 EDISON is a voice assistant written in JavaScript using **React** and **NodeJS**. It uses the [Bumblebee Hot Word Detection system](https://github.com/jaxcore/bumblebee-hotword), the [Artyom Speech Synthesis Library](https://sdkcarlos.github.io/sites/artyom.html) and the `webkitSpeechRecognition` API available in Chromium-based browsers. The requests are serviced by a REST-ful backend written in Express.js.
 
+
+
+https://user-images.githubusercontent.com/37783178/125089162-c27f6f80-e0eb-11eb-8729-02e6936efc09.mp4
+
+
+
 ## Running it yourself
 
 To run the project yourself, run
